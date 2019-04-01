@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "ALREADY_SET=foo EMPTY_VAR='' node -r multi-env/config index.js"
+    "test": "ALREADY_SET=foo EMPTY_VAR='' NODE_ENV=production node -r multi-env/config index.js"
   },
   "author": "Jacob LeGrone <git@jacob.work>",
   "license": "MIT",
@@ -16,8 +16,10 @@
     "multi-env": {
       "files": [
         "primary.env",
-        "secondary.env"
-      ]
+        "secondary.env",
+        "${NODE_ENV}.env"
+      ],
+      "expandProcessVarsInFileName": true
     }
   }
 }

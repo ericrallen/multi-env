@@ -33,6 +33,10 @@ const cases = [
     var: 'SECONDARY_EXPANDED',
     expected: 'SECONDARY:EXPANDED',
   },
+  {
+    var: 'TEST_URL',
+    expected: 'https://secure.example.com/',
+  },
 ];
 
 cases.forEach((tc) => {
